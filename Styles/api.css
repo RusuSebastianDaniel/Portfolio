@@ -1,0 +1,190 @@
+
+.food-card-section{
+    display: grid;
+    grid:
+        "article card " auto
+        / auto 30%;
+    gap: 12px 8px; 
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.food-article{
+    grid-area: article;
+    color: #fff;
+    font-size: 1.5rem;
+    width: 90%;
+}
+
+.food-card-page{
+    grid-area: card;
+    background-color: #73599a;
+    border-radius: 10px;
+    width: 200px;
+    height:360px;
+    display: grid;
+    box-shadow: 0 0 10px rgba(31, 5, 48, 0.2);
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: space-evenly;
+    font-size: 5rem;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: perspective(5000px) rotateY(var(--rotateX)) rotateX(var(--rotateY));
+    transition: transform 0.1s linear
+}
+
+.food-card-page::after{
+    content: "";
+    position: absolute;
+    border-radius: inherit
+}
+
+.food-card-page::after{
+    inset: -1rem;
+    background:
+    linear-gradient(-45deg,yellow,purple);
+    transform: translateZ(-50px);
+}
+
+.food-card-page::before{
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    inset: 0.75rem;
+    background-color: rgb(41, 10, 56);
+    transform: translateZ(-49px);
+    filter: blur(15px);
+    opacity: 0.5;
+}
+.food-section{
+    height: 100vh;
+    border-top: 2px solid white;
+}
+.weather-section{
+    height: 100vh;
+    
+}
+
+.weather-card-section{
+    display: grid;
+    grid:
+        "card article" auto
+        / 30% auto;
+    gap: 12px 8px;
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+}
+
+.weather-card-page{
+    grid-area: card;
+    display: grid;
+    
+}
+
+.weather-article{
+    grid-area: article;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.weather-card-page{
+    background-color: #73599a;
+    border-radius: 10px;
+    width: 200px;
+    height:360px;
+    display: grid;
+    box-shadow: 0 0 10px rgba(31, 5, 48, 0.2);
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: space-evenly;
+    font-size: 5rem;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: perspective(5000px) rotateY(var(--rotateX)) rotateX(var(--rotateY));
+    transition: transform 0.1s linear
+}
+
+
+.weather-card-page::after{
+    content: "";
+    position: absolute;
+    border-radius: inherit
+}
+
+.weather-card-page::after{
+    inset: -1rem;
+    background:
+    linear-gradient(-45deg,yellow,purple);
+    transform: translateZ(-50px);
+}
+
+.weather-card-page::before{
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    inset: 0.75rem;
+    background-color: rgb(41, 10, 56);
+    transform: translateZ(-49px);
+    filter: blur(15px);
+    opacity: 0.5;
+}
+
+.expanded {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: #c4b3b3;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    display: flex;
+}
+
+.expanded > button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    z-index: 4;
+}
+
+@media (width < 768px) {
+    
+
+    .food-article,.weather-article{
+        grid-area: article;
+        font-size: clamp(1rem, 1.5vw, 2rem)
+    }
+    .food-card-section,.weather-card-section{
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
+        display: grid;
+        grid:
+        "card" 1fr "article" 1fr / 1fr;
+            gap: 8px;
+        }
+        
+    .food-card-page,.weather-card-page{
+        grid-area: card;
+        height: clamp(250px, 30vw, 300px);
+        width: clamp(100px, 30vw, 300px);
+        transform: none;
+        font-size: clamp(2em, 1.5vw, 3em);
+    }
+}

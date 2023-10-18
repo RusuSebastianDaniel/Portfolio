@@ -1,0 +1,35 @@
+
+.initial-content{
+    color: black;
+    display: grid;
+    grid-area: input;
+    justify-content: end;
+    justify-items: start;
+    align-items: center;
+    align-content: center;
+}
+    
+.extended-content{
+    color: black;
+    width: 100%;
+    font-size: 1.4rem;
+    display: grid;
+    grid:
+            "input c2 c3 c4 c5 c6 c7" 1fr / 25% 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 8px;
+        justify-items: center;
+        align-items: center;
+
+    }
+
+
+.weather-card0,
+.weather-card1,
+.weather-card2,
+.weather-card3,
+.weather-card4,
+.weather-card5{
+    border: 2px solid black;
+    border-radius: 2rem;
+    padding: 2rem;
+}

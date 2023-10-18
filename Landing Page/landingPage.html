@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product landing Page</title>
+    <link rel="stylesheet" href="./Styles/menu.css">
+    <link rel="stylesheet" href="./Styles/gallery.css">
+    <script src="./Scripts/gallery.js" defer></script>
+    <script src="./Scripts/menu.js" defer></script>
+    <script src="https://kit.fontawesome.com/f820be7764.js" crossorigin="anonymous" defer></script>
+</head>
+<body>  
+    <header>
+        <nav data-toggled="false" data-transitionable="false">
+            <div id="nav-logo-section" class="nav-section">
+                <a href="../index.html">
+                    <i class="fa-brands fa-unsplash" style="color: #ffffff;"></i>
+                </a>
+            </div>
+            <div id="nav-mobile-section">
+                <div id="nav-link-section" class="nav-section">
+                    <a href=".main">ABOUT</a>
+                    <a onclick="document.querySelector(`main`).scrollIntoView()">Our Work</a>
+
+                </div>
+                <div id="nav-contact-section" class="nav-section">
+                    <a href="#">Conctact Us</a>
+                </div>
+            </div>
+            <button id="nav-toggle-button" type="button" onclick="handleNavToggle()">
+                <span>Menu</span>
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+        <section class="menu-section">
+            <div id="menu">
+                <div id="menu-items">
+                    <div class="menu-item"><a onclick="document.querySelector(`main`).scrollIntoView()">Our Work</a></div>
+                    <div class="menu-item"><a onclick="document.querySelector(`#contact-us`).scrollIntoView()">About</a></div>
+                    <div class="menu-item"><a onclick="document.querySelector(`footer`).scrollIntoView()">Contact Us</a></div>
+                </div>
+                <div id="menu-background-pattern"></div>
+                <div id="menu-background-image"></div>
+            </div>
+        </section>
+    </header>
+    <main>
+        <article data-index="0" data-status="active">
+            <div class="article-image-section article-section"></div>
+            <div class="article-description-section article-section">
+                <p>
+                    See pictures from the most recent weddings we've shot. We're pretty good at it, if we do say so ourselves.
+                </p>
+                <button><a href="./wedding carousel/wedding.html">Click Here</a></button>
+            </div>
+            <div class="article-title-section article-section">
+                <h2>Weddings</h2>
+            </div>
+            <div class="article-nav-section article-section">
+                <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+                    <i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i>
+                </button>
+                <button class="article-nav-button" type="button" onclick="handleRightClick()">
+                    <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i>
+                </button>
+            </div>
+        </article>
+        <article data-index="1" data-status="inactive">
+            <div class="article-image-section article-section"></div>
+            <div class="article-description-section article-section">
+                <p>
+                    City art is the best art. It's like nature, but with more concrete and less trees.
+                </p>
+                <button><a href="./City Carousel/city.html">Click Here</a></button>
+            </div>
+            <div class="article-title-section article-section">
+                <h2>City Art</h2>
+            </div>
+            <div class="article-nav-section article-section">
+                <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+                    <i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i>
+                </button>
+                <button class="article-nav-button" type="button" onclick="handleRightClick()">
+                    <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i>
+                </button>
+            </div>
+        </article>
+        <article data-index="2" data-status="inactive">
+            <div class="article-image-section article-section"></div>
+            <div class="article-description-section article-section">
+                <p>
+                    Nature is pretty cool. It's like a big blob of stuff that's all connected and stuff. It's also pretty
+                </p>
+                <button><a href="./Nature Carousel/nature.html">Click Here</a></button>
+            </div>
+            <div class="article-title-section article-section">
+                <h2>Nature</h2>
+            </div>
+            <div class="article-nav-section article-section">
+                <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+                    <i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i>
+                </button>
+                <button class="article-nav-button" type="button" onclick="handleRightClick()">
+                    <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i>
+                </button>
+            </div>
+        </article>
+        <article data-index="3" data-status="inactive">
+            <div class="article-image-section article-section"></div>
+            <div class="article-description-section article-section">
+                <p>
+                    Gaze into the stars and see the universe. It's pretty cool. 
+                </p>
+                <button><a href="./space Carousel/space.html">Click Here</a></button>
+            </div>
+            <div class="article-title-section article-section">
+                <h2>Space</h2>
+                <i class="fa-light fa-plus-large"></i>
+            </div>
+            <div class="article-nav-section article-section">
+                <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+                    <i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i>
+                </button>
+                <button class="article-nav-button" type="button" onclick="handleRightClick()">
+                    <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i>
+                </button>
+            </div>
+        </article>
+    </main> 
+    <section id="contact-us">
+        <div class="contact-us-img">
+        </div>
+        <button>Contact</button>
+    </div>
+        
+    </section>
+    <footer id="footer">
+        <div id="footer-link-section" class="footer-section ">
+            <div class="footer-item"><a href="#">About</a></div> 
+            <div class="footer-item"><a href="#">Our Work</a></div>
+            <div class="footer-item"><a href="#">Contact Us</a></div>
+        </div>
+        <div id="footer-social-section" class="footer-section footer-item">
+            <a href="#">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+        </div>
+        <div id="footer-background-pattern"></div>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,96 @@
+
+.card {
+    display: grid;
+    grid:
+    "title main steps" 1fr
+    / 1fr 2fr 1fr;
+    gap: 8px;
+}
+
+.title > img {
+    max-width: calc(100% - 16px);
+    max-height: fit-content;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.title > h2{
+    font-size: 3rem;
+    color: #000000;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: grid;
+    align-items: end;
+}
+.title > h3 {
+    font-size: 1.5rem;
+    color: #000000;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.title{
+    grid-area: title;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.main{
+    grid-area : main;
+    display: grid;
+    grid-area: main;
+    display: grid;
+    align-items: start;
+    align-content: center;
+    justify-items: center;
+}
+.main > h3{
+    font-size: 2rem;
+    color: #000000;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.main > p {
+    font-size: 1.2rem;
+    color: #000000;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.main > ol {
+    font-size: 1rem;
+    color: #000000;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+.steps-and-ingredients{
+    display: grid;
+    align-content: center;
+
+}
+.steps{
+    grid-area : steps;
+    
+}
+
+.steps > ul{
+    list-style: none;
+}
+
+.steps > ul > li {
+    line-break:strict;
+    font-size: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    text-shadow: #000000 0px 0px 10px;
+}
+

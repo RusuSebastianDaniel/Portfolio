@@ -1,0 +1,47 @@
+.side .fancy-word{
+    font-family: "lobster", cursive;
+    font-size: 1.3em;
+    font-weight: 500;
+    color: black;
+
+}
+
+.side{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    position: absolute;
+}
+
+.side .title{
+    color: #fff;
+    font-family: 'Rubik', sans-serif;
+    font-size: 6vw;
+    margin: 0 15vw;
+    width: 70vw;
+    place-items: center;
+}
+
+#left-side{
+    background-color: #661cd4;
+    z-index: 2;
+}
+
+#left-side .title{
+    color:#fff
+}
+#left-side .fancy-word{
+    color: #fefdf6
+}
+
+#right-side{
+    background-color: #d1c557;
+}
+#right-side .title{
+    color: black;
+}
+#right-side .fancy-word{
+    color: #38340f
+}
